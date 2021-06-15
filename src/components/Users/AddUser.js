@@ -18,7 +18,7 @@ const AddUser = (props) => {
     if (+enteredAge < 1) { //this forces enteredAge, a string, to compare here as a number
       return;
     }
-    console.log(enteredUsername, enteredAge);
+    props.onAddUser(enteredUsername, enteredAge); //from our parent -- see <AddUser> component
     setEnteredUsername('');
     setEnteredAge('');
   };
